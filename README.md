@@ -115,7 +115,7 @@ This script can run through a docker container with a set interval (default ever
 
 ```bash
 syncarr:
-    image: syncarr/syncarr:latest
+    image: maddemonoide/syncarr:latest
     container_name: syncarr
     restart: unless-stopped
     environment:
@@ -132,7 +132,7 @@ or
 
 ```bash
 syncarr:
-    image: syncarr/syncarr:latest
+    image: maddemonoide/syncarr:latest
     container_name: syncarr
     restart: unless-stopped
     environment:
@@ -149,7 +149,7 @@ or
 
 ```bash
 syncarr:
-    image: syncarr/syncarr:latest
+    image: maddemonoide/syncarr:latest
     container_name: syncarr
     restart: unless-stopped
     environment:
@@ -169,7 +169,7 @@ syncarr:
 For just plain docker (radarr example):
 
 ```bash
-docker run -it --rm --name syncarr -e RADARR_A_URL=https://4k.example.com:443 -e RADARR_A_KEY=XXXXX -e RADARR_B_URL=http://127.0.0.1:8080 -e RADARR_B_KEY=XXXXX -e RADARR_B_PROFILE=1080p -e RADARR_B_PATH=/data/Movies -e SYNC_INTERVAL_SECONDS=300 syncarr/syncarr
+docker run -it --rm --name syncarr -e RADARR_A_URL=https://4k.example.com:443 -e RADARR_A_KEY=XXXXX -e RADARR_B_URL=http://127.0.0.1:8080 -e RADARR_B_KEY=XXXXX -e RADARR_B_PROFILE=1080p -e RADARR_B_PATH=/data/Movies -e SYNC_INTERVAL_SECONDS=300 maddemonoide/syncarr
 ```
 
 ## Notes
