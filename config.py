@@ -279,7 +279,7 @@ if radarrA_url and radarrB_url:
     instanceA_language = radarrA_language
     instanceA_language_id = radarrA_language_id
     instanceA_tag_filter = radarrA_tag_filter and radarrA_tag_filter.split(',')
-    instanceA_tag_filter_id = radarrA_tag_filter_id and radarrA_tag_filter_id.split(',')
+    instanceA_tag_filter_id = radarrA_tag_filter_id and [int(id) for id in radarrA_tag_filter_id.split(',')]
     instanceA_quality_match = radarrA_quality_match
     instanceA_blacklist = radarrA_blacklist
 
@@ -293,7 +293,7 @@ if radarrA_url and radarrB_url:
     instanceB_language = radarrB_language
     instanceB_language_id = radarrB_language_id
     instanceB_tag_filter = radarrB_tag_filter and radarrB_tag_filter.split(',')
-    instanceB_tag_filter_id = radarrB_tag_filter_id and radarrB_tag_filter_id.split(',')
+    instanceB_tag_filter_id = radarrB_tag_filter_id and [int(id) for id in radarrB_tag_filter_id.split(',')]
     instanceB_quality_match = radarrB_quality_match
     instanceB_blacklist = radarrB_blacklist
 
@@ -316,7 +316,7 @@ elif sonarrA_url and sonarrB_url:
     instanceA_language = sonarrA_language
     instanceA_language_id = sonarrA_language_id
     instanceA_tag_filter = sonarrA_tag_filter and sonarrA_tag_filter.split(',')
-    instanceA_tag_filter_id = sonarrA_tag_filter_id and sonarrA_tag_filter_id.split(',')
+    instanceA_tag_filter_id = sonarrA_tag_filter_id and [int(id) for id in sonarrA_tag_filter_id.split(',')]
     instanceA_quality_match = sonarrA_quality_match
     instanceA_blacklist = sonarrA_blacklist
 
@@ -330,7 +330,7 @@ elif sonarrA_url and sonarrB_url:
     instanceB_language = sonarrB_language
     instanceB_language_id = sonarrB_language_id
     instanceB_tag_filter = sonarrB_tag_filter and sonarrB_tag_filter.split(',')
-    instanceB_tag_filter_id = sonarrB_tag_filter_id and sonarrB_tag_filter_id.split(',')
+    instanceB_tag_filter_id = sonarrB_tag_filter_id and [int(id) for id in sonarrB_tag_filter_id.split(',')]
     instanceB_quality_match = sonarrB_quality_match
     instanceB_blacklist = sonarrB_blacklist
 
