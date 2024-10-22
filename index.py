@@ -20,6 +20,7 @@ from config import (
     instanceB_profile_id, instanceB_profile_filter, instanceB_profile_filter_id,
     instanceB_language_id, instanceB_language, instanceB_quality_match,
     instanceB_tag_filter_id, instanceB_tag_filter, instanceB_blacklist,
+    instanceB_series_type,
 
     content_id_key, logger, is_sonarr, is_radarr, is_lidarr,
     get_status_path, get_content_path, get_profile_path, get_language_path, get_tag_path, get_content_put_path,
@@ -30,7 +31,7 @@ from config import (
 )
 
 
-def get_content_details(content, instance_path, instance_profile_id, instance_url, instance_language_id=None):
+def get_content_details(content, instance_path, instance_profile_id, instance_url, instance_language_id=None, instance_series_type=None):
     """gets details of a content item"""
     global monitor_new_content, auto_search
 
@@ -63,7 +64,7 @@ def get_content_details(content, instance_path, instance_profile_id, instance_ur
         payload['languageProfileId'] = instance_language_id if instance_language_id else content.get(
             'languageProfileId')
         payload['tags'] = content.get('tags')
-        payload['seriesType'] = content.get('seriesType')
+        payload['seriesType'] = instance_series_type if instance_series_type else content.get('seriesType')
         payload['useSceneNumbering'] = content.get('useSceneNumbering')
         payload['addOptions'] = {
             **add_options,
@@ -258,6 +259,7 @@ def sync_servers(instanceA_contents, instanceB_language_id, instanceB_contentIds
                 instance_profile_id=instanceB_profile_id,
                 instance_url=instanceB_url,
                 instance_language_id=instanceB_language_id,
+                instance_series_type=instanceB_series_type
             )
             instanceB_content_url = get_content_path(instanceB_url, instanceB_key)
 
