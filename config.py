@@ -253,6 +253,7 @@ instanceB_quality_match = ''
 instanceB_tag_filter = ''
 instanceB_tag_filter_id = ''
 instanceB_blacklist = ''
+instanceB_series_type = ''
 
 api_version = ''
 
@@ -334,6 +335,7 @@ elif sonarrA_url and sonarrB_url:
     instanceB_tag_filter_id = sonarrB_tag_filter_id and [int(id) for id in sonarrB_tag_filter_id.split(',')]
     instanceB_quality_match = sonarrB_quality_match
     instanceB_blacklist = sonarrB_blacklist
+    instanceB_series_type = sonarrB_series_type
 
     api_version = V3_API_PATH
     api_content_path = 'series'
@@ -473,6 +475,7 @@ logger.debug({
     'instanceB_tag_filter_id': instanceB_tag_filter_id,
     'instanceB_quality_match': instanceB_quality_match,
     'instanceB_blacklist': instanceB_blacklist,
+    'instanceB_series_type': instanceB_series_type,
 
     'api_content_path': api_content_path,
     'api_profile_path': api_profile_path,
