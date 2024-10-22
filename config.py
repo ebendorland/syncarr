@@ -129,6 +129,7 @@ sonarrB_language = get_config_value('SONARR_B_LANGUAGE', 'language', 'sonarrB')
 sonarrB_language_id = get_config_value('SONARR_B_LANGUAGE_ID', 'language_id', 'sonarrB')
 sonarrB_quality_match = get_config_value('SONARR_B_QUALITY_MATCH', 'quality_match', 'sonarrB')
 sonarrB_blacklist = get_config_value('SONARR_B_BLACKLIST', 'blacklist', 'sonarrB')
+sonarrB_series_type = get_config_value('SONARR_B_SERIES_TYPE', 'series_type', 'sonarrB')
 
 # get config settings from ENV or config files for Lidarr
 lidarrA_url = get_config_value('LIDARR_A_URL', 'url', 'lidarrA')
